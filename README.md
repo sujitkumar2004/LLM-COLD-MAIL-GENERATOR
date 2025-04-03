@@ -20,7 +20,7 @@ Cold Email Generation: Automatically generate cold emails tailored to the job de
 # Installation
 Clone this repository:
 ```bash
-  git clone https://github.com/sohamvsonar/LLM-cold-email-generator.git
+  git clone https://github.com/sujitkumar2004/LLM-COLD-MAIL-GENERATOR
   ```
 
 Install the required packages:
