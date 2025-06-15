@@ -1,41 +1,32 @@
-# LLM Cold Email Generator
+# 📧 Cold Mail Generator
+Cold email generator for services company using groq, langchain and streamlit. It allows users to input the URL of a company's careers page. The tool then extracts job listings from that page and generates personalized cold emails. These emails include relevant portfolio links sourced from a vector database, based on the specific job descriptions. 
 
-Overview
-This project is designed to automate the process of scraping job listings, extracting relevant information from the scraped content, and generating personalized cold emails for outreach using LangChain. The pipeline uses a machine learning model, ChatGroq, and document loaders from LangChain to achieve these objectives.
+**Imagine a scenario:**
 
-# Features:
-Job Scraping: Scrape job listings from a specified website.
-Information Extraction: Extract important details such as job role, experience, skills, and description using natural language models.
-Portfolio Matching: Compare extracted job requirements to the user’s portfolio using a vector store for skill matching.
-Cold Email Generation: Automatically generate cold emails tailored to the job description, highlighting relevant work in the portfolio.
+- Nike needs a Principal Software Engineer and is spending time and resources in the hiring process, on boarding, training etc
+- Atliq is Software Development company can provide a dedicated software development engineer to Nike. So, the business development executive (Mohan) from Atliq is going to reach out to Nike via a cold email.
 
-# Requirements
-- Python 3.7+
-- OpenAI API key
-- Required Python packages:
-  openai
-  python-dotenv
-  ipywidgets
+![img.png](imgs/img.png)
 
-# Installation
-Clone this repository:
-```bash
-  git clone https://github.com/sujitkumar2004/LLM-COLD-MAIL-GENERATOR
-  ```
+## Architecture Diagram
+![img.png](imgs/architecture.png)
 
-Install the required packages:
-```bash
-  pip install openai python-dotenv ipywidgets
-  ```
+## Set-up
+1. To get started we first need to get an API_KEY from here: https://console.groq.com/keys. Inside `app/.env` update the value of `GROQ_API_KEY` with the API_KEY you created. 
 
-Create a .env file in the project root and add your OpenAI API key:
-```bash
-  OPENAI_API_KEY=your_api_key_here
-  ```
 
-# Usage
-- Open the llm_code_email_generator.ipynb notebook in Jupyter Lab or Jupyter Notebook.
-- Run all cells in the notebook.
-- Use the provided input fields to enter company and recipient information.
-- Click the "Generate Email" button to create a personalized cold email.
-- The generated email will be displayed below the input fields.
+2. To get started, first install the dependencies using:
+    ```commandline
+     pip install -r requirements.txt
+    ```
+   
+3. Run the streamlit app:
+   ```commandline
+   streamlit run app/main.py
+   ```
+   
+
+Copyright (C) Codebasics Inc. All rights reserved.
+
+**Additional Terms:**
+This software is licensed under the MIT License. However, commercial use of this software is strictly prohibited without prior written permission from the author. Attribution must be given in all copies or substantial portions of the software.
